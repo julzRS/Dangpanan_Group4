@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DANGPANAN - Pagpuyo sa Cebu nga Hapsay</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hidden radio inputs to drive view switching with CSS -->
+  <input type="radio" id="nav-home" name="view" class="view-radio" checked>
+  <input type="radio" id="nav-about" name="view" class="view-radio">
+  <input type="radio" id="nav-contact" name="view" class="view-radio">
+  <input type="radio" id="nav-settings" name="view" class="view-radio">
+
+  <!-- Category View Radios -->
+  <input type="radio" id="cat-main" name="category" class="cat-radio" checked>
+  <input type="radio" id="cat-apartments" name="category" class="cat-radio">
+  <input type="radio" id="cat-condos" name="category" class="cat-radio">
+  <input type="radio" id="cat-boarding" name="category" class="cat-radio">
+
+  <!-- Theme Toggle Checkbox -->
+  <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+
+  <div class="ambient-bg"></div>
+  <div class="city-silhouette"></div>
+
+  <!-- Header & Navigation -->
+  <div class="header-wrapper">
+    <svg class="header-svg" viewBox="0 0 1000 220" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#6e021a;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#f78c8c;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <path d="M 0,35 Q 0,0 35,0 L 965,0 Q 1000,0 1000,35 L 1000,125 Q 1000,145 980,145 L 470,145 C 380,145 350,220 280,220 C 180,220 0,160 0,160 Z" fill="url(#headerGrad)"/>
+    </svg>
+
+    <div class="header-content">
+      <label for="nav-home" for="cat-main" class="logo">DANGPANAN</label>
+      <nav class="nav-menu">
+        <label for="nav-about">About Us</label>
+        <label for="nav-contact">Contact</label>
+        <label for="nav-settings">Settings</label>
+      </nav>
+    </div>
+  </div>
+
+  <main class="main-container">
+
+    <!-- HOME VIEW -->
+    <section id="home-view" class="view-section">
+      <div class="search-box">
+        <input type="text" class="search-input" placeholder="Search locations or rooms...">
+      </div>
+
+      <!-- Main Category Selection Cards -->
+      <div class="selection-grid">
+        <label for="cat-apartments" class="selection-card">
+          <h3 class="card-title">Apartments</h3>
+          <p class="card-desc">Spacious living spaces & family units</p>
+        </label>
+
+        <label for="cat-condos" class="selection-card">
+          <h3 class="card-title">Condominiums</h3>
+          <p class="card-desc">Modern city amenities & luxury stays</p>
+        </label>
+
+        <label for="cat-boarding" class="selection-card">
+          <h3 class="card-title">Boarding Houses</h3>
+          <p class="card-desc">Affordable shared rooms & bed space</p>
+        </label>
+      </div>
+
+      <!-- Category Listings (Pure CSS Toggled) -->
+      <div class="listing-view apartments-list">
+        <label for="cat-main" class="back-btn">← Back to Categories</label>
+        <h2 class="listing-title">Apartments in Cebu</h2>
+        <div class="listing-container">
+          <div class="listing-item-card">
+            <h4>Mabolo Family Apartment</h4>
+            <p>2 Bedrooms, near IT Park, fully furnished.</p>
+            <div class="price-tag">₱15,000 / mo</div>
+          </div>
+          <div class="listing-item-card">
+            <h4>Lahug Cozy Studio Unit</h4>
+            <p>Accessible location, secure gated compound.</p>
+            <div class="price-tag">₱10,000 / mo</div>
+          </div>
+          <div class="listing-item-card">
+            <h4>Banilad Townhouse Unit</h4>
+            <p>Spacious 3 bedrooms with parking space.</p>
+            <div class="price-tag">₱25,000 / mo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="listing-view condos-list">
+        <label for="cat-main" class="back-btn">← Back to Categories</label>
+        <h2 class="listing-title">Condominiums in Cebu</h2>
+        <div class="listing-container">
+          <div class="listing-item-card">
+            <h4>Skyrise Luxury Condo</h4>
+            <p>High-floor unit with pool & gym access.</p>
+            <div class="price-tag">₱28,000 / mo</div>
+          </div>
+          <div class="listing-item-card">
+            <h4>Horizon 101 City Suite</h4>
+            <p>Heart of Cebu City, stunning mountain view.</p>
+            <div class="price-tag">₱22,000 / mo</div>
+          </div>
+          <div class="listing-item-card">
+            <h4>Baseline Premier Residence</h4>
+            <p>Modern amenities, beside commercial hubs.</p>
+            <div class="price-tag">₱20,000 / mo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="listing-view boarding-list">
+        <label for="cat-main" class="back-btn">← Back to Categories</label>
+        <h2 class="listing-title">Boarding Houses in Cebu</h2>
+        <div class="listing-container">
+          <div class="listing-item-card">
+            <h4>Talamban Student Bedspace</h4>
+            <p>Near USC Talamban, inclusive of water & electricity.</p>
+            <div class="price-tag">₱3,500 / mo</div>
+          </div>
+          <div class="listing-item-card">
+            <h4>Urgello Dormitory Room</h4>
+            <p>Accessible to downtown colleges and hospitals.</p>
+            <div class="price-tag">₱4,500 / mo</div>
+          </div>
+          <div class="listing-item-card">
+            <h4>Guadalupe Shared Room</h4>
+            <p>Quiet neighborhood, fast Wi-Fi included.</p>
+            <div class="price-tag">₱4,000 / mo</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer-tagline">Pagpuyo sa Cebu nga Hapsay!</p>
+    </section>
+
+    <!-- ABOUT US VIEW -->
+    <section id="about-view" class="view-section">
+      <div class="content-card">
+        <h2>About Us</h2>
+        <p><strong>DANGPANAN</strong> is a digital platform designed to simplify the process of finding suitable rental accommodations in Cebu. We provide users with an organized and accessible way to explore apartments, condominiums, and boarding houses based on their preferences and needs.</p>
+        <p>The goal is to make the search for a place to stay more convenient, accessible, and reliable, helping individuals and families find accommodation that fits their lifestyle and budget.</p>
+        <p class="about-tag">DANGPANAN — Your place, your choice.</p>
+      </div>
+      <label for="nav-home" class="back-btn">← Back to Home</label>
+    </section>
+
+    <!-- CONTACT VIEW -->
+    <section id="contact-view" class="view-section">
+      <div class="content-card text-center">
+        <h2>Contact Us</h2>
+        <p class="text-center">Have questions or concerns? You can reach us through:</p>
+        <ul class="contact-info-list">
+          <li>📧 Email: dangpanan@gmail.com</li>
+          <li>📱 Phone: 09XX-XXX-XXXX</li>
+          <li>📍 Location: Cebu City, Philippines</li>
+        </ul>
+      </div>
+      <label for="nav-home" class="back-btn">← Back to Home</label>
+    </section>
+
+    <!-- SETTINGS VIEW -->
+    <section id="settings-view" class="view-section">
+      <div class="content-card">
+        <h2>Settings</h2>
+        <div class="settings-list">
+          <div class="setting-item">
+            <span class="setting-label">Notifications</span>
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="setting-item">
+            <span class="setting-label">Dark Mode</span>
+            <label for="theme-toggle" class="switch">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="setting-item">
+            <span class="setting-label">Privacy Preferences</span>
+            <span class="setting-btn">Manage</span>
+          </div>
+          <div class="setting-item">
+            <span class="setting-label">Account Information</span>
+            <span class="setting-btn">Edit</span>
+          </div>
+        </div>
+      </div>
+      <label for="nav-home" class="back-btn">← Back to Home</label>
+    </section>
+
+  </main>
+
+</body>
+</html>
